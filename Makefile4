@@ -1,0 +1,12 @@
+CC=gcc
+CFLAGES=-c -Wall
+arith: main.o sum.o subtract.o
+	$(CC) $^ -o $@
+.c:.o
+	$(CC) $(FLAGES) $<
+	
+clean:
+	rm -f arith
+	rm -f *.o
+
+	

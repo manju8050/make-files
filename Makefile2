@@ -1,0 +1,17 @@
+CC=gcc
+CFLAGES=-c -Wall
+arith: main.o sum.o subtract.o
+	$(CC) main.c sum.c subtract.c -o arith
+	
+main.o:main.c
+	$(CC) $(CFLAGES) main.c
+sum.o:sum.c
+	$(CC) $(CFLAGES) sum.c
+subtract.o:subtract.c
+	$(CC) $(CFLAGES) subtract.c
+	
+clean:
+	rm -f arith
+	rm -f *.o
+
+	

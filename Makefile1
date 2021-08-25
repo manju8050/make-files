@@ -1,0 +1,15 @@
+arith: main.o sum.o subtract.o
+	gcc main.c sum.c subtract.c -o arith
+	
+main.o:main.c
+	gcc -c main.c
+sum.o:sum.c
+	gcc -c sum.c
+subtract.o:subtract.c
+	gcc -c subtract.c
+	
+clean:
+	rm -f arith
+	rm -f *.o
+
+	
